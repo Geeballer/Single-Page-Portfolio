@@ -1,0 +1,625 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: auto;
+    position: relative;
+}
+
+.container-fluid{
+    height: auto;
+}
+
+/********** Navbar Container **********/
+
+.container-fluid_navbar{
+    background-color: purple;
+}
+
+/********** Navbar **********/
+
+.navbar-brand{
+    color: #fff;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.navbar-brand:hover{
+    color: #fff;
+}
+
+.navbar-nav .nav-item .nav-link{
+    font-size: 1.5rem;
+    color: #fff;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar .nav-link:hover{
+    border-bottom: 2px solid #fff;
+}
+
+.flex-nav{
+    display:  flex;
+    justify-content: flex-end;
+}
+
+.nav-item{
+    margin-right: 3rem;
+    font-weight: 500;
+}
+
+.nav-border{
+    border: 2px solid #fff;
+    border-radius: 5px;
+
+}
+
+/********** Banner **********/
+
+.banner{
+    height: 100vh;
+    background-image: linear-gradient(to right bottom, rgb(0,0,0,.7), rgb(0,0,0,.7)), url(../images/Friends-Image_3.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.name{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+    letter-spacing: 5px;
+    animation: animateLeft 3s ease-in-out;
+}
+
+.interest{
+    color: #fff;
+    font-size: 1.8rem;
+    width: 70%;
+    animation: animateRight 3s ease-in-out;
+}
+
+/********** Banner Text Animation **********/
+
+@keyframes animateLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80%{
+        transform: translateX(10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes animateRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80%{
+        transform: translateX(-10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/********** About **********/
+
+.about{
+    width: 100%;
+    height: auto;
+    padding-top: 5rem;
+}
+
+.header{
+    font-size: 3rem;
+    color: purple;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+}
+
+.about-grid{
+    display: flex;
+}
+
+.about-image{
+    height: auto;
+    width: 40%;
+    padding: 2rem;
+    box-shadow: inset 6px 6px 6px 6px #cbced1, inset -6px -6px 6px #fff;
+    margin-right: 5rem;
+}
+
+.about-image img{
+    width: 100%;
+    height: 80vh;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px #fff;
+}
+
+.about-info{
+    width: 60%;
+    height: 100%;
+}
+
+.about-text{
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    letter-spacing: 3px;
+}
+
+.cv, .call{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: purple;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    box-shadow: inset 6px 6px 6px 6px #cbced1, inset -6px -6px 6px #fff;
+    border-radius: 2rem;
+}
+
+.cv:hover, .call:hover{
+    color: purple;
+    border-bottom: 2px solid purple;
+    border-top: 2px solid purple;
+}
+
+.cv{
+    margin-right: 5rem;
+}
+
+/********** Gallery **********/
+
+.gallery{
+    height: auto;
+    padding-top: 5rem;
+}
+
+.gallery-row{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 1rem;
+
+}
+
+.gallery-image{
+    width: 32rem;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+    border-radius: 1rem;
+    transition: all .3s ease-in-out;
+}
+
+.gallery-image:hover{
+    transform: scale(0.9);
+}
+
+.gallery-image:hover::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 1rem;
+}
+
+.one{
+    background-image: url(../images/Single-Image_1.jpg);
+}
+
+.two{
+    background-image: url(../images/Friends-Image_4.jpg);
+}
+
+.three{
+    background-image: url(../images/Single-Image_2.jpg);
+}
+
+.four{
+    background-image: url(../images/Friends-Image_2.jpg);
+}
+
+.five{
+    background-image: url(../images/Single-Image_3.jpg);
+}
+
+.six{
+    background-image: url(../images/Friends-Image_1.jpg);
+}
+
+.arrow-up{
+    display: none;
+}
+
+/********** Footer **********/
+
+.footer{
+    padding-top: 5rem;
+    height: 10rem;
+    width: 100%;
+}
+
+.copyright{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+/********** Media Query for Portrait Mobile **********/
+@media only screen and (min-width:320px) and (max-width: 479px){
+    
+    body{
+        width: 100%;
+        height: auto;
+    }
+
+    /********** Navbar **********/
+
+    .navbar-dark .navbar-toggler{
+        color: #fff;
+        background-color: transparent;
+    }
+
+    .navbar-dark .navbar-toggler{
+        border: 2px solid #fff;
+    }
+
+    .navbar-collapse{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    /********** Banner **********/
+
+    .name{
+        width: 60%;
+        margin-bottom: 3rem;
+    }
+
+    .interest{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    /********** About **********/
+
+    .header{
+        font-size: 2rem;
+    }
+
+    .about-grid{
+        flex-direction: column;
+    }
+
+    .about-image{
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+
+    .about-image img{
+        height: 65vh;
+    }
+
+    .about-info{
+        width: 100%;
+    }
+
+    .about-text{
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        text-align: justify;
+    }
+
+    .about-links{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cv{
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    /********** Gallery **********/
+
+    .gallery-row{
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 2rem;
+        height: auto;
+    }
+
+    .gallery-image{
+        width: 95%;
+        height: 60vh;
+        background-position: top;
+    }
+
+    .arrow-up{
+        display: block;
+        font-size: 3rem;
+        text-decoration: none;
+        color: #fff;
+        background-color: purple;
+        padding: 0 1.8rem;
+        border-radius: 50%;
+        text-align: center;
+        position: fixed;
+        right: 5%;
+        bottom: 5%;
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    .arrow-up:hover{
+        color: #fff;
+    }
+
+    .arrow-up.active{
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+}
+
+/********** Media Query for Landscape Mobile **********/
+@media only screen and (min-width:480px) and (max-width: 767px){
+
+    body{
+        width: 100%;
+        height: auto;
+    }
+
+    /********** Navbar **********/
+
+    .navbar-dark .navbar-toggler{
+        color: #fff;
+        background-color: transparent;
+    }
+
+    .navbar-dark .navbar-toggler{
+        border: 2px solid #fff;
+    }
+
+    .navbar-collapse{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    /********** Banner **********/
+
+    .name{
+        width: 60%;
+        margin-bottom: 3rem;
+    }
+
+    .interest{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    /********** About **********/
+
+    .header{
+        font-size: 2rem;
+    }
+
+    .about-grid{
+        flex-direction: column;
+    }
+
+    .about-image{
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+
+    .about-image img{
+        height: 180vh;
+    }
+
+    .about-info{
+        width: 100%;
+    }
+
+    .about-text{
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        text-align: justify;
+    }
+
+    .about-links{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cv{
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+
+    /********** Gallery **********/
+
+    .gallery-row{
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 2rem;
+        height: auto;
+    }
+
+    .gallery-image{
+        width: 95%;
+        height: 100vh;
+        background-position: top;
+    }
+
+    .arrow-up{
+        display: block;
+        font-size: 3rem;
+        text-decoration: none;
+        color: #fff;
+        background-color: purple;
+        padding: 0 1.8rem;
+        border-radius: 50%;
+        text-align: center;
+        position: fixed;
+        right: 5%;
+        bottom: 5%;
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    .arrow-up:hover{
+        color: #fff;
+    }
+
+    .arrow-up.active{
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+}
+
+/********** Media Query for Tablet **********/
+@media only screen and (min-width:768px) and (max-width: 979px){
+
+    body{
+        width: 100%;
+        height: auto;
+    }
+
+    /********** Navbar **********/
+
+    .navbar-dark .navbar-toggler{
+        color: #fff;
+        background-color: transparent;
+    }
+
+    .navbar-dark .navbar-toggler{
+        border: 2px solid #fff;
+    }
+
+    .navbar-collapse{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    /********** Banner **********/
+
+    .name{
+        margin-bottom: 3rem;
+    }
+
+    .interest{
+        font-size: 1.8rem;
+        width: 90%;
+    }
+
+    /********** About **********/
+
+    .header{
+        font-size: 3rem;
+    }
+
+    .about-grid{
+        flex-direction: column;
+    }
+
+    .about-image{
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+
+    .about-image img{
+        height: 90vh;
+    }
+
+    .about-info{
+        width: 100%;;
+    }
+
+    .about-text{
+        font-size: 1.7rem;
+        letter-spacing: 2px;
+        text-align: justify;
+    }
+
+    .about-links{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cv{
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+
+    /********** Gallery **********/
+
+    .gallery-row{
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 2rem;
+        height: auto;
+    }
+
+    .gallery-image{
+        width: 95%;
+        height: 100vh;
+        background-position: top;
+    }
+
+}
+
+/********** Media Query for Desktop **********/
+@media only screen and (min-width:1024px) and (max-width: 1199px){
+
+}
+
+/********** Media Query for Large Desktop **********/
+@media only screen and (min-width:1200px){
+    
+}
